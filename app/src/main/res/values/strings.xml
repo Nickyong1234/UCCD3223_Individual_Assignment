@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Individual Assignment</string>
+    <string name="welcome_to_maths_game">Welcome to Maths Game!</string>
+    <string name="welcome_text">Welcome Text</string>
+    <string name="please_select_a_mode">Please select a mode:</string>
+    <string name="compare">Compare</string>
+    <string name="order">Order</string>
+    <string name="compose">Compose</string>
 </resources>
