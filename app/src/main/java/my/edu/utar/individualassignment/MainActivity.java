@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         bcompare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Create an intent to start the second activity
+                // Create an intent to start the compare activity
                 Intent intent = new Intent(MainActivity.this, Compare.class);
                 // Start the activity
                 startActivity(intent);
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         border.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Create an intent to start the second activity
+                // Create an intent to start the order activity
                 Intent intent = new Intent(MainActivity.this, Order.class);
                 // Start the activity
                 startActivity(intent);
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         bcompose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Create an intent to start the second activity
+                // Create an intent to start the compose activity
                 Intent intent = new Intent(MainActivity.this, Compose.class);
                 // Start the activity
                 startActivity(intent);

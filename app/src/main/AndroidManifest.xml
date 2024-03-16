@@ -20,7 +20,7 @@
             android:exported="true" />
         <activity
             android:name=".Compare"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
