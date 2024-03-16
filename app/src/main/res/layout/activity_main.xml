@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/Welcome"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFF59D"
     tools:context=".MainActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="113dp"
+        android:clickable="false"
         android:contentDescription="@string/welcome_text"
+        android:fontFamily="sans-serif-medium"
         android:text="@string/welcome_to_maths_game"
         android:textAlignment="center"
         android:textSize="30sp"
@@ -26,6 +28,7 @@
         android:id="@+id/textView"
         android:layout_width="204dp"
         android:layout_height="64dp"
+        android:fontFamily="sans-serif-medium"
         android:text="@string/please_select_a_mode"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -35,8 +38,8 @@
         app:layout_constraintVertical_bias="0.445" />
 
     <LinearLayout
-        android:layout_width="270dp"
-        android:layout_height="260dp"
+        android:layout_width="271dp"
+        android:layout_height="310dp"
         android:layoutMode="opticalBounds"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -47,25 +50,28 @@
         app:layout_constraintVertical_bias="0.876">
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/bcompare"
             android:layout_width="270dp"
             android:layout_height="100dp"
             android:layout_weight="1"
-            android:text="@string/compare" />
+            android:text="@string/compare"
+            android:textSize="24sp" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/border"
             android:layout_width="270dp"
             android:layout_height="100dp"
             android:layout_weight="1"
-            android:text="@string/order" />
+            android:text="@string/order"
+            android:textSize="24sp" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/bcompose"
             android:layout_width="270dp"
             android:layout_height="100dp"
             android:layout_weight="1"
-            android:text="@string/compose" />
+            android:text="@string/compose"
+            android:textSize="24sp" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
