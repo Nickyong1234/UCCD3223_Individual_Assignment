@@ -6,4 +6,51 @@
     android:layout_height="match_parent"
     tools:context=".Compare">
 
+    <TextView
+        android:id="@+id/CompareTitle"
+        android:layout_width="156dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="146dp"
+        android:layout_marginTop="162dp"
+        android:layout_marginEnd="146dp"
+        android:layout_marginBottom="512dp"
+        android:text="@string/compare_numbers"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/CompareQuestion"
+        android:layout_width="248dp"
+        android:layout_height="143dp"
+        android:text="Please select a Random number"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.432" />
+
+    <Button
+        android:id="@+id/button_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        tools:layout_editor_absoluteX="82dp"
+        tools:layout_editor_absoluteY="444dp" />
+
+    <Button
+        android:id="@+id/button_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        tools:layout_editor_absoluteX="239dp"
+        tools:layout_editor_absoluteY="444dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
