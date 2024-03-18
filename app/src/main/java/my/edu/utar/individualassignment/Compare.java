@@ -19,14 +19,13 @@ public class Compare extends AppCompatActivity {
         // declare a new int variable
         int BigOrSmall;
 
-
         // Random either Bigger or Smaller
         int random = (int) (Math.random() * 2);
         if (random == 0) {
             // Bigger
             BigOrSmall = 1;
             //Replace CompareTitle text with "Bigger"
-            TextView CompareTitle = findViewById(R.id.CompareQuestion);
+            TextView CompareTitle = findViewById(R.id.ComposeQuestion);
             CompareTitle.setText(R.string.please_select_a_bigger_number);
 
         }
@@ -34,7 +33,7 @@ public class Compare extends AppCompatActivity {
             // Smaller
             BigOrSmall = 0;
             //Replace CompareTitle text with "Smaller"
-            TextView CompareTitle = findViewById(R.id.CompareQuestion);
+            TextView CompareTitle = findViewById(R.id.ComposeQuestion);
             CompareTitle.setText(R.string.please_select_a_smaller_number);
         }
 
@@ -55,17 +54,21 @@ public class Compare extends AppCompatActivity {
                 // Create an intent to start the compare activity
                 if (BigOrSmall == 1 /*Bigger*/) {
                     if (randomleft > randomright){
+                        // To be replaced with another activity (Correct View)
                         Toast.makeText(Compare.this, "Correct!", Toast.LENGTH_SHORT).show();
                     }
                     else {
+                        // To be replaced with another activity (Incorrect View)
                         Toast.makeText(Compare.this, "Wrong!", Toast.LENGTH_SHORT).show();
                     }
                 }
                 else /*Smaller*/{
                     if (randomleft < randomright){
+                        // To be replaced with another activity (Correct View)
                         Toast.makeText(Compare.this, "Correct!", Toast.LENGTH_SHORT).show();
                     }
                     else{
+                        // To be replaced with another activity (Incorrect View)
                         Toast.makeText(Compare.this, "Wrong!", Toast.LENGTH_SHORT).show();
                     }
                 }
@@ -82,17 +85,21 @@ public class Compare extends AppCompatActivity {
                 // Create an intent to start the compare activity
                 if (BigOrSmall == 1 /*Bigger*/) {
                     if (randomright > randomleft){
+                        // To be replaced with another activity (Correct View)
                         Toast.makeText(Compare.this, "Correct!", Toast.LENGTH_SHORT).show();
                     }
                     else {
+                        // To be replaced with another activity (Incorrect View)
                         Toast.makeText(Compare.this, "Wrong!", Toast.LENGTH_SHORT).show();
                     }
                 }
                 else /*Smaller*/{
                     if (randomright < randomleft){
+                        // To be replaced with another activity (Correct View)
                         Toast.makeText(Compare.this, "Correct!", Toast.LENGTH_SHORT).show();
                     }
                     else{
+                        // To be replaced with another activity (Incorrect View)
                         Toast.makeText(Compare.this, "Wrong!", Toast.LENGTH_SHORT).show();
                     }
                 }

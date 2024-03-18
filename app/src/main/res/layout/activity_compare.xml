@@ -8,7 +8,7 @@
     tools:context=".Compare">
 
     <TextView
-        android:id="@+id/CompareTitle"
+        android:id="@+id/ComposeTitle"
         android:layout_width="156dp"
         android:layout_height="86dp"
         android:layout_marginStart="146dp"
@@ -27,7 +27,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/CompareQuestion"
+        android:id="@+id/ComposeQuestion"
         android:layout_width="255dp"
         android:layout_height="89dp"
         android:text="@string/please_select_a_random_number"
@@ -53,7 +53,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button_right"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CompareQuestion" />
+        app:layout_constraintTop_toBottomOf="@+id/ComposeQuestion" />
 
     <Button
         android:id="@+id/button_right"
@@ -68,7 +68,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button_left"
-        app:layout_constraintTop_toBottomOf="@+id/CompareQuestion" />
+        app:layout_constraintTop_toBottomOf="@+id/ComposeQuestion" />
 
     <Button
         android:id="@+id/BackButton"
@@ -83,6 +83,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CompareQuestion"
+        app:layout_constraintTop_toBottomOf="@+id/ComposeQuestion"
         app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
