@@ -9,4 +9,6 @@
     <string name="compare_numbers">Compare Numbers</string>
     <string name="please_select_a_bigger_number">Please select a bigger number</string>
     <string name="please_select_a_smaller_number">Please select a smaller number</string>
+    <string name="wrong" />
+    <string name="correct" />
 </resources>

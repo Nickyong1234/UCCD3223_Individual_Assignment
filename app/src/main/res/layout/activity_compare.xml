@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFAB91"
     tools:context=".Compare">
 
     <TextView
@@ -14,6 +15,7 @@
         android:layout_marginTop="162dp"
         android:layout_marginEnd="146dp"
         android:layout_marginBottom="512dp"
+        android:fontFamily="@font/arbutus_slab"
         android:text="@string/compare_numbers"
         android:textAlignment="center"
         android:textSize="30sp"
@@ -26,8 +28,8 @@
 
     <TextView
         android:id="@+id/CompareQuestion"
-        android:layout_width="248dp"
-        android:layout_height="143dp"
+        android:layout_width="255dp"
+        android:layout_height="89dp"
         android:text="Please select a Random number"
         android:textAlignment="center"
         android:textSize="30sp"
@@ -42,15 +44,29 @@
         android:id="@+id/button_left"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="78dp"
+        android:layout_marginEnd="66dp"
+        android:layout_marginBottom="238dp"
         android:text="Button"
-        tools:layout_editor_absoluteX="82dp"
-        tools:layout_editor_absoluteY="444dp" />
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_right"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CompareQuestion" />
 
     <Button
         android:id="@+id/button_right"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="78dp"
+        android:layout_marginEnd="82dp"
+        android:layout_marginBottom="238dp"
         android:text="Button"
-        tools:layout_editor_absoluteX="239dp"
-        tools:layout_editor_absoluteY="444dp" />
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_left"
+        app:layout_constraintTop_toBottomOf="@+id/CompareQuestion" />
 </androidx.constraintlayout.widget.ConstraintLayout>
