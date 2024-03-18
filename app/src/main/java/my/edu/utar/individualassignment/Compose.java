@@ -44,18 +44,18 @@ public class Compose extends AppCompatActivity {
         QuestionNumber.setText(String.valueOf(Number));
 
         // Listener for Submit Button
-        Button Submit = (Button) findViewById(R.id.SubmitButton);
+        Button Submit = findViewById(R.id.SubmitButton);
         Submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 // Getter for Input1
-                EditText input1 = (EditText) findViewById(R.id.Input1);
+                EditText input1 = findViewById(R.id.Input1);
                 String input1String = input1.getText().toString();
                 int Input1 = Integer.parseInt(input1String);
 
                 // Getter for Input2
-                EditText input2 = (EditText) findViewById(R.id.Input2);
+                EditText input2 = findViewById(R.id.Input2);
                 String input2String = input2.getText().toString();
                 int Input2 = Integer.parseInt(input2String);
 
@@ -80,7 +80,7 @@ public class Compose extends AppCompatActivity {
         });
 
         // Get the Back button
-        Button Back = (Button) findViewById(R.id.BackButton);
+        Button Back = findViewById(R.id.BackButton);
         // Create a button listener
         Back.setOnClickListener(new View.OnClickListener() {
             @Override
