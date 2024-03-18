@@ -9,6 +9,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class Compose extends AppCompatActivity {
 
     @Override
@@ -16,38 +18,44 @@ public class Compose extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_compose);
 
-        // declare a new int variable
-        int Number;
-        // declare a new int variable for Operation
-        int Operation;
+        // declare atomic integer for Number, Operation, random, and correct
+        AtomicInteger Number = new AtomicInteger();
+        AtomicInteger Operation = new AtomicInteger();
+        AtomicInteger random = new AtomicInteger();
+        AtomicInteger correct = new AtomicInteger();
+
         // Random Number for Operation (Addition or Subtraction)
-        int random = (int) (Math.random() * 2);
-        if (random == 0) {
+        random.set((int) (Math.random() * 2));
+        if (random.get() == 0) {
             // Addition
-            Operation = 1;
+            Operation.set(1);
             //Replace Operation text with "Addition"
             TextView OperationTitle = findViewById(R.id.OperationSym);
             OperationTitle.setText("+");
         }
         else {
             // Subtraction
-            Operation = 0;
+            Operation.set(0);
             //Replace Operation text with "Subtraction"
             TextView OperationTitle = findViewById(R.id.OperationSym);
             OperationTitle.setText("-");
         }
+
         // Random Number for Question
-        random = (int) (Math.random() * 100);
-        Number = random;
+        random.set((int) (Math.random() * 100));
+        Number.set(random.get());
         //Replace QuestionNumber text with "Number"
         TextView QuestionNumber = findViewById(R.id.QuestionNumber);
-        QuestionNumber.setText(String.valueOf(Number));
+        QuestionNumber.setText(String.valueOf(Number.get()));
 
         // Listener for Submit Button
         Button Submit = findViewById(R.id.SubmitButton);
         Submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                // Set Correct to 0
+                correct.set(0);
 
                 // Getter for Input1
                 EditText input1 = findViewById(R.id.Input1);
@@ -60,21 +68,50 @@ public class Compose extends AppCompatActivity {
                 int Input2 = Integer.parseInt(input2String);
 
                 // Create an intent to start the compose activity
-                if (Operation == 1 /*Addition*/) {
-                    if (Input1 + Input2 == Number){
+                if (Operation.get() == 1 /*Addition*/) {
+                    if (Input1 + Input2 == Number.get()){
                         Toast.makeText(Compose.this, "Correct!", Toast.LENGTH_SHORT).show();
+                        correct.set(1);
                     }
                     else {
                         Toast.makeText(Compose.this, "Wrong!", Toast.LENGTH_SHORT).show();
                     }
                 }
                 else {
-                    if (Input1 - Input2 == Number){
+                    if (Input1 - Input2 == Number.get()){
                         Toast.makeText(Compose.this, "Correct!", Toast.LENGTH_SHORT).show();
+                        correct.set(1);
                     }
                     else {
                         Toast.makeText(Compose.this, "Wrong!", Toast.LENGTH_SHORT).show();
                     }
+                }
+                // Clear the input fields
+                input1.setText("");
+                input2.setText("");
+                // if correct is 1, then randomize Operation and Number
+                if (correct.get() == 1) {
+                    // Random Number for Operation (Addition or Subtraction)
+                    random.set((int) (Math.random() * 2));
+                    if (random.get() == 0) {
+                        // Addition
+                        Operation.set(1);
+                        //Replace Operation text with "Addition"
+                        TextView OperationTitle = findViewById(R.id.OperationSym);
+                        OperationTitle.setText("+");
+                    } else {
+                        // Subtraction
+                        Operation.set(0);
+                        //Replace Operation text with "Subtraction"
+                        TextView OperationTitle = findViewById(R.id.OperationSym);
+                        OperationTitle.setText("-");
+                    }
+                    // Random Number for Question
+                    random.set((int) (Math.random() * 100));
+                    Number.set(random.get());
+                    //Replace QuestionNumber text with "Number"
+                    TextView QuestionNumber = findViewById(R.id.QuestionNumber);
+                    QuestionNumber.setText(String.valueOf(Number.get()));
                 }
             }
         });
@@ -85,7 +122,7 @@ public class Compose extends AppCompatActivity {
         Back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Create an intent to start the main activity
+                // End the activity
                 finish();
             }
         });
