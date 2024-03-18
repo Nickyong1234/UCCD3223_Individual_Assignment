@@ -14,4 +14,11 @@
     <string name="button">Button</string>
     <string name="back_to_home">Back to home</string>
     <string name="please_select_a_random_number">Please select a Random number</string>
+    <string name="please_compose_the_shown_number">Please compose the shown number</string>
+    <string name="compose_numbers">Compose Numbers</string>
+    <string name="number1">number</string>
+    <string name="number2">number</string>
+    <string name="OperationSym">X</string>
+    <string name="submit">Submit</string>
+    <string name="QuestionNumber">Number</string>
 </resources>
