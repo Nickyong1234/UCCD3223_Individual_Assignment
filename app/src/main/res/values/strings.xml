@@ -11,4 +11,7 @@
     <string name="please_select_a_smaller_number">Please select a smaller number</string>
     <string name="wrong" />
     <string name="correct" />
+    <string name="button">Button</string>
+    <string name="back_to_home">Back to home</string>
+    <string name="please_select_a_random_number">Please select a Random number</string>
 </resources>

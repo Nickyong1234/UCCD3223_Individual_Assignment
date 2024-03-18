@@ -1,7 +1,5 @@
 package my.edu.utar.individualassignment;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,7 +7,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.material.snackbar.Snackbar;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Compare extends AppCompatActivity {
 
@@ -99,6 +97,19 @@ public class Compare extends AppCompatActivity {
                     }
                 }
                 Intent intent = new Intent(Compare.this, Compare.class);
+                // Start the activity
+                startActivity(intent);
+            }
+        });
+
+        // Get the BackButton button
+        Button back = (Button) findViewById(R.id.BackButton);
+        // Create a button listener
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Create an intent to start the main activity
+                Intent intent = new Intent(Compare.this, MainActivity.class);
                 // Start the activity
                 startActivity(intent);
             }
