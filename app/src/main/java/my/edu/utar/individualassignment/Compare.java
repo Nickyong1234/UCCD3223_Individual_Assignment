@@ -38,8 +38,8 @@ public class Compare extends AppCompatActivity {
         }
 
         // Get the button
-        Button button_left = (Button) findViewById(R.id.button_left);
-        Button button_right = (Button) findViewById(R.id.button_right);
+        Button button_left = findViewById(R.id.button_left);
+        Button button_right = findViewById(R.id.button_right);
 
         // Create 2 random integers and set text to the buttons
         int randomleft = (int) (Math.random() * 100);
@@ -110,7 +110,7 @@ public class Compare extends AppCompatActivity {
         });
 
         // Get the BackButton button
-        Button back = (Button) findViewById(R.id.BackButton);
+        Button back = findViewById(R.id.BackButton);
         // Create a button listener
         back.setOnClickListener(new View.OnClickListener() {
             @Override
