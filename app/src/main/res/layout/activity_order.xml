@@ -24,7 +24,7 @@
             android:id="@+id/OrderTitle"
             android:layout_width="254dp"
             android:layout_height="48dp"
-            android:fontFamily="@font/arbutus_slab"
+            android:fontFamily="@font/buenard_bold"
             android:text="@string/order_numbers"
             android:textAlignment="center"
             android:textSize="30sp" />
@@ -37,6 +37,7 @@
             android:id="@+id/OrderQuestion"
             android:layout_width="319dp"
             android:layout_height="68dp"
+            android:fontFamily="@font/archivo"
             android:text="@string/please_arrange_the_shown_numbers_in_xxxxxxxxxx_order"
             android:textAlignment="center"
             android:textSize="24sp" />

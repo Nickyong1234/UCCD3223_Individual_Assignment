@@ -3,5 +3,8 @@
     <array name="preloaded_fonts" translatable="false">
         <item>@font/arbutus_slab</item>
         <item>@font/archivo</item>
+        <item>@font/buenard_bold</item>
+        <item>@font/dm_serif_display</item>
+        <item>@font/ubuntu_medium</item>
     </array>
 </resources>
