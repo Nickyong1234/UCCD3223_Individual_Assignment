@@ -88,10 +88,9 @@ public class Compare extends AppCompatActivity {
                 TextView CompareTitle = findViewById(R.id.ComposeQuestion);
                 CompareTitle.setText(R.string.please_select_a_smaller_number);
             }
-            /*Intent intent = new Intent(Compare.this, Compare.class);
-            // Start the activity
-            startActivity(intent);*/
+
         });
+
 
         // Create a button listener
         button_right.setOnClickListener(view -> {
@@ -131,9 +130,7 @@ public class Compare extends AppCompatActivity {
                 TextView CompareTitle = findViewById(R.id.ComposeQuestion);
                 CompareTitle.setText(R.string.please_select_a_smaller_number);
             }
-            /*Intent intent = new Intent(Compare.this, Compare.class);
-            // Start the activity
-            startActivity(intent);*/
+
         });
 
         // Get the BackButton button
