@@ -55,14 +55,20 @@ public class Compose extends AppCompatActivity {
             // Set Correct to 0
             correct.set(0);
 
-            // Getter for Input1
+            // Check if either Input is empty
             EditText input1 = findViewById(R.id.Input1);
             String input1String = input1.getText().toString();
+            EditText input2 = findViewById(R.id.Input2);
+            String input2String = input2.getText().toString();
+            if (input1String.isEmpty() || input2String.isEmpty()) {
+                Toast.makeText(Compose.this, "Please fill in both inputs!", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            // Getter for Input1
             int Input1 = Integer.parseInt(input1String);
 
             // Getter for Input2
-            EditText input2 = findViewById(R.id.Input2);
-            String input2String = input2.getText().toString();
             int Input2 = Integer.parseInt(input2String);
 
             // Create an intent to start the compose activity
