@@ -61,6 +61,11 @@ public class Order extends AppCompatActivity {
         num4.setText(String.valueOf(randomnum4));
         num5.setText(String.valueOf(randomnum5));
 
+        // check if theres duplicates
+        if (randomnum1.get() == randomnum2.get() || randomnum1.get() == randomnum3.get() || randomnum1.get() == randomnum4.get() || randomnum1.get() == randomnum5.get() || randomnum2.get() == randomnum3.get() || randomnum2.get() == randomnum4.get() || randomnum2.get() == randomnum5.get() || randomnum3.get() == randomnum4.get() || randomnum3.get() == randomnum5.get() || randomnum4.get() == randomnum5.get()) {
+            generateRandomNumbers(randomnum1, randomnum2, randomnum3, randomnum4, randomnum5);
+        }
+
         // Get the SelectedNum buttons
         Button SelectedNum1 = findViewById(R.id.Selectednum1);
         Button SelectedNum2 = findViewById(R.id.Selectednum2);
@@ -167,18 +172,9 @@ public class Order extends AppCompatActivity {
                     TextView OrderTitle = findViewById(R.id.OrderQuestion);
                     OrderTitle.setText(R.string.please_select_the_numbers_in_descending_order);
                 }
-                // Random Number for Question
-                randomnum1.set((int) (Math.random() * 100));
-                randomnum2.set((int) (Math.random() * 100));
-                randomnum3.set((int) (Math.random() * 100));
-                randomnum4.set((int) (Math.random() * 100));
-                randomnum5.set((int) (Math.random() * 100));
-                // Set the 5 random numbers into the Num buttons
-                num1.setText(String.valueOf(randomnum1));
-                num2.setText(String.valueOf(randomnum2));
-                num3.setText(String.valueOf(randomnum3));
-                num4.setText(String.valueOf(randomnum4));
-                num5.setText(String.valueOf(randomnum5));
+                // Generate 5 random numbers as the options
+                generateRandomNumbers(randomnum1, randomnum2, randomnum3, randomnum4, randomnum5);
+
             }
 
         });
@@ -228,6 +224,31 @@ public class Order extends AppCompatActivity {
             SNum5.set(randomnum1.get());
             // Set the text to the SelectedNum button
             SelectedNum5.setText(String.valueOf(SNum5));
+        }
+    }
+    private void generateRandomNumbers(AtomicInteger randomnum1, AtomicInteger randomnum2, AtomicInteger randomnum3, AtomicInteger randomnum4, AtomicInteger randomnum5) {
+        // Random Number for Question
+        randomnum1.set((int) (Math.random() * 100));
+        randomnum2.set((int) (Math.random() * 100));
+        randomnum3.set((int) (Math.random() * 100));
+        randomnum4.set((int) (Math.random() * 100));
+        randomnum5.set((int) (Math.random() * 100));
+
+        // Set the 5 random numbers into the Num buttons
+        Button num1 = findViewById(R.id.Num1);
+        Button num2 = findViewById(R.id.Num2);
+        Button num3 = findViewById(R.id.Num3);
+        Button num4 = findViewById(R.id.Num4);
+        Button num5 = findViewById(R.id.Num5);
+        num1.setText(String.valueOf(randomnum1));
+        num2.setText(String.valueOf(randomnum2));
+        num3.setText(String.valueOf(randomnum3));
+        num4.setText(String.valueOf(randomnum4));
+        num5.setText(String.valueOf(randomnum5));
+
+        // check if theres duplicates
+        if (randomnum1.get() == randomnum2.get() || randomnum1.get() == randomnum3.get() || randomnum1.get() == randomnum4.get() || randomnum1.get() == randomnum5.get() || randomnum2.get() == randomnum3.get() || randomnum2.get() == randomnum4.get() || randomnum2.get() == randomnum5.get() || randomnum3.get() == randomnum4.get() || randomnum3.get() == randomnum5.get() || randomnum4.get() == randomnum5.get()) {
+            generateRandomNumbers(randomnum1, randomnum2, randomnum3, randomnum4, randomnum5);
         }
     }
 }

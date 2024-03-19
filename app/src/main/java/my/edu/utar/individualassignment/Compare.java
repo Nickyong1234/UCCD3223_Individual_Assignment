@@ -54,22 +54,24 @@ public class Compare extends AppCompatActivity {
         button_left.setOnClickListener(view -> {
             // Create an intent to start the compare activity
             if (BigOrSmall.get() == 1 /*Bigger*/) {
-                if (randomleft.get() > randomright.get()){
-                    // To be replaced with another activity (Correct View)
+                if (randomleft.get() == randomright.get()){
+                    Toast.makeText(Compare.this, "They are the same number!", Toast.LENGTH_SHORT).show();
+                }
+                else if (randomleft.get() > randomright.get()){
                     Toast.makeText(Compare.this, "Correct!", Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    // To be replaced with another activity (Incorrect View)
                     Toast.makeText(Compare.this, "Wrong!", Toast.LENGTH_SHORT).show();
                 }
             }
             else /*Smaller*/{
-                if (randomleft.get() < randomright.get()){
-                    // To be replaced with another activity (Correct View)
+                if (randomleft.get() == randomright.get()){
+                    Toast.makeText(Compare.this, "They are the same number!", Toast.LENGTH_SHORT).show();
+                }
+                else if (randomleft.get() < randomright.get()){
                     Toast.makeText(Compare.this, "Correct!", Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    // To be replaced with another activity (Incorrect View)
                     Toast.makeText(Compare.this, "Wrong!", Toast.LENGTH_SHORT).show();
                 }
             }
