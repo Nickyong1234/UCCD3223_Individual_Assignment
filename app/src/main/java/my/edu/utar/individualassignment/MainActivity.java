@@ -14,7 +14,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         // Get the button
         Button bcompare = (Button) findViewById(R.id.bcompare);
         // Create a button listener
