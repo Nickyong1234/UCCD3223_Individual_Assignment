@@ -62,7 +62,13 @@ public class Order extends AppCompatActivity {
         num5.setText(String.valueOf(randomnum5));
 
         // check if theres duplicates and zero
-        if (randomnum1.get() == randomnum2.get() || randomnum1.get() == randomnum3.get() || randomnum1.get() == randomnum4.get() || randomnum1.get() == randomnum5.get() || randomnum2.get() == randomnum3.get() || randomnum2.get() == randomnum4.get() || randomnum2.get() == randomnum5.get() || randomnum3.get() == randomnum4.get() || randomnum3.get() == randomnum5.get() || randomnum4.get() == randomnum5.get() || randomnum1.get() == 0 || randomnum2.get() == 0 || randomnum3.get() == 0 || randomnum4.get() == 0 || randomnum5.get() == 0){
+        if (randomnum1.get() == randomnum2.get() || randomnum1.get() == randomnum3.get() ||
+                randomnum1.get() == randomnum4.get() || randomnum1.get() == randomnum5.get() ||
+                randomnum2.get() == randomnum3.get() || randomnum2.get() == randomnum4.get() ||
+                randomnum2.get() == randomnum5.get() || randomnum3.get() == randomnum4.get() ||
+                randomnum3.get() == randomnum5.get() || randomnum4.get() == randomnum5.get() ||
+                randomnum1.get() == 0 || randomnum2.get() == 0 || randomnum3.get() == 0 ||
+                randomnum4.get() == 0 || randomnum5.get() == 0){
             generateRandomNumbers(randomnum1, randomnum2, randomnum3, randomnum4, randomnum5);
         }
 
@@ -74,11 +80,16 @@ public class Order extends AppCompatActivity {
         Button SelectedNum5 = findViewById(R.id.Selectednum5);
 
         // When clicked on Num buttons, move the value to the SelectedNum button
-        num1.setOnClickListener(view -> setNumber(SNum1, SNum2, SNum3, SNum4, SNum5, randomnum1, SelectedNum1, SelectedNum2, SelectedNum3, SelectedNum4, SelectedNum5));
-        num2.setOnClickListener(view -> setNumber(SNum1, SNum2, SNum3, SNum4, SNum5, randomnum2, SelectedNum1, SelectedNum2, SelectedNum3, SelectedNum4, SelectedNum5));
-        num3.setOnClickListener(view -> setNumber(SNum1, SNum2, SNum3, SNum4, SNum5, randomnum3, SelectedNum1, SelectedNum2, SelectedNum3, SelectedNum4, SelectedNum5));
-        num4.setOnClickListener(view -> setNumber(SNum1, SNum2, SNum3, SNum4, SNum5, randomnum4, SelectedNum1, SelectedNum2, SelectedNum3, SelectedNum4, SelectedNum5));
-        num5.setOnClickListener(view -> setNumber(SNum1, SNum2, SNum3, SNum4, SNum5, randomnum5, SelectedNum1, SelectedNum2, SelectedNum3, SelectedNum4, SelectedNum5));
+        num1.setOnClickListener(view -> setNumber(SNum1, SNum2, SNum3, SNum4, SNum5, randomnum1,
+                SelectedNum1, SelectedNum2, SelectedNum3, SelectedNum4, SelectedNum5));
+        num2.setOnClickListener(view -> setNumber(SNum1, SNum2, SNum3, SNum4, SNum5, randomnum2,
+                SelectedNum1, SelectedNum2, SelectedNum3, SelectedNum4, SelectedNum5));
+        num3.setOnClickListener(view -> setNumber(SNum1, SNum2, SNum3, SNum4, SNum5, randomnum3,
+                SelectedNum1, SelectedNum2, SelectedNum3, SelectedNum4, SelectedNum5));
+        num4.setOnClickListener(view -> setNumber(SNum1, SNum2, SNum3, SNum4, SNum5, randomnum4,
+                SelectedNum1, SelectedNum2, SelectedNum3, SelectedNum4, SelectedNum5));
+        num5.setOnClickListener(view -> setNumber(SNum1, SNum2, SNum3, SNum4, SNum5, randomnum5,
+                SelectedNum1, SelectedNum2, SelectedNum3, SelectedNum4, SelectedNum5));
 
         // when clicked on SelectedNum buttons, remove the number
         SelectedNum1.setOnClickListener(view -> {
@@ -120,7 +131,8 @@ public class Order extends AppCompatActivity {
             int correct = 0;
             // Create an intent to start the order activity
             if (Order.get() == 1 /*Ascending*/) {
-                if (SNum1.get() < SNum2.get() && SNum2.get() < SNum3.get() && SNum3.get() < SNum4.get() && SNum4.get() < SNum5.get()){
+                if (SNum1.get() < SNum2.get() && SNum2.get() < SNum3.get() &&
+                        SNum3.get() < SNum4.get() && SNum4.get() < SNum5.get()){
                     // To be replaced with another activity (Correct View)
                     Toast.makeText(Order.this, "Correct!", Toast.LENGTH_SHORT).show();
                     // Set correct to 1
@@ -128,11 +140,13 @@ public class Order extends AppCompatActivity {
                 }
                 else {
                     // To be replaced with another activity (Incorrect View)
-                    Toast.makeText(Order.this, "Incorrect! Try again!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Order.this, "Incorrect! Try again!",
+                            Toast.LENGTH_SHORT).show();
                 }
             }
             else /*Descending*/{
-                if (SNum1.get() > SNum2.get() && SNum2.get() > SNum3.get() && SNum3.get() > SNum4.get() && SNum4.get() > SNum5.get()){
+                if (SNum1.get() > SNum2.get() && SNum2.get() > SNum3.get() &&
+                        SNum3.get() > SNum4.get() && SNum4.get() > SNum5.get()){
                     // To be replaced with another activity (Correct View)
                     Toast.makeText(Order.this, "Correct!", Toast.LENGTH_SHORT).show();
                     // Set correct to 1
@@ -140,7 +154,8 @@ public class Order extends AppCompatActivity {
                 }
                 else{
                     // To be replaced with another activity (Incorrect View)
-                    Toast.makeText(Order.this, "Incorrect! Try again!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Order.this, "Incorrect! Try again!",
+                            Toast.LENGTH_SHORT).show();
                 }
             }
             // clear the SelectedNum buttons
@@ -189,7 +204,10 @@ public class Order extends AppCompatActivity {
 
     }
 
-    private void setNumber(AtomicInteger SNum1, AtomicInteger SNum2, AtomicInteger SNum3, AtomicInteger SNum4, AtomicInteger SNum5, AtomicInteger randomnum1, Button SelectedNum1, Button SelectedNum2, Button SelectedNum3, Button SelectedNum4, Button SelectedNum5) {
+    private void setNumber(AtomicInteger SNum1, AtomicInteger SNum2, AtomicInteger SNum3,
+                           AtomicInteger SNum4, AtomicInteger SNum5, AtomicInteger randomnum1,
+                           Button SelectedNum1, Button SelectedNum2, Button SelectedNum3,
+                           Button SelectedNum4, Button SelectedNum5) {
         // Check if Snum1 is empty
         if (SNum1.get() == 0) {
             // Set the value to Snum1
@@ -226,7 +244,9 @@ public class Order extends AppCompatActivity {
             SelectedNum5.setText(String.valueOf(SNum5));
         }
     }
-    private void generateRandomNumbers(AtomicInteger randomnum1, AtomicInteger randomnum2, AtomicInteger randomnum3, AtomicInteger randomnum4, AtomicInteger randomnum5) {
+    private void generateRandomNumbers(AtomicInteger randomnum1, AtomicInteger randomnum2,
+                                       AtomicInteger randomnum3, AtomicInteger randomnum4,
+                                       AtomicInteger randomnum5) {
         // Random Number for Question
         randomnum1.set((int) (Math.random() * 100));
         randomnum2.set((int) (Math.random() * 100));
@@ -247,7 +267,13 @@ public class Order extends AppCompatActivity {
         num5.setText(String.valueOf(randomnum5));
 
         // check if theres duplicates and zero
-        if (randomnum1.get() == randomnum2.get() || randomnum1.get() == randomnum3.get() || randomnum1.get() == randomnum4.get() || randomnum1.get() == randomnum5.get() || randomnum2.get() == randomnum3.get() || randomnum2.get() == randomnum4.get() || randomnum2.get() == randomnum5.get() || randomnum3.get() == randomnum4.get() || randomnum3.get() == randomnum5.get() || randomnum4.get() == randomnum5.get() || randomnum1.get() == 0 || randomnum2.get() == 0 || randomnum3.get() == 0 || randomnum4.get() == 0 || randomnum5.get() == 0){
+        if (randomnum1.get() == randomnum2.get() || randomnum1.get() == randomnum3.get() ||
+                randomnum1.get() == randomnum4.get() || randomnum1.get() == randomnum5.get() ||
+                randomnum2.get() == randomnum3.get() || randomnum2.get() == randomnum4.get() ||
+                randomnum2.get() == randomnum5.get() || randomnum3.get() == randomnum4.get() ||
+                randomnum3.get() == randomnum5.get() || randomnum4.get() == randomnum5.get() ||
+                randomnum1.get() == 0 || randomnum2.get() == 0 || randomnum3.get() == 0 ||
+                randomnum4.get() == 0 || randomnum5.get() == 0){
             generateRandomNumbers(randomnum1, randomnum2, randomnum3, randomnum4, randomnum5);
         }
     }

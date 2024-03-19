@@ -45,7 +45,8 @@ public class Compose extends AppCompatActivity {
         random.set((int) (Math.random() * 100));
         Number.set(random.get());
         //Replace QuestionNumber text with "Number"
-        AtomicReference<TextView> QuestionNumber = new AtomicReference<>(findViewById(R.id.QuestionNumber));
+        AtomicReference<TextView> QuestionNumber =
+                new AtomicReference<>(findViewById(R.id.QuestionNumber));
         QuestionNumber.get().setText(String.valueOf(Number.get()));
 
         // Listener for Submit Button
@@ -61,7 +62,8 @@ public class Compose extends AppCompatActivity {
             EditText input2 = findViewById(R.id.Input2);
             String input2String = input2.getText().toString();
             if (input1String.isEmpty() || input2String.isEmpty()) {
-                Toast.makeText(Compose.this, "Please fill in both inputs!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Compose.this, "Please fill in both inputs!",
+                        Toast.LENGTH_SHORT).show();
                 return;
             }
 
