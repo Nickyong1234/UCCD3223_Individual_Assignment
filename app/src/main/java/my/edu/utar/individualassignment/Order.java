@@ -61,8 +61,8 @@ public class Order extends AppCompatActivity {
         num4.setText(String.valueOf(randomnum4));
         num5.setText(String.valueOf(randomnum5));
 
-        // check if theres duplicates
-        if (randomnum1.get() == randomnum2.get() || randomnum1.get() == randomnum3.get() || randomnum1.get() == randomnum4.get() || randomnum1.get() == randomnum5.get() || randomnum2.get() == randomnum3.get() || randomnum2.get() == randomnum4.get() || randomnum2.get() == randomnum5.get() || randomnum3.get() == randomnum4.get() || randomnum3.get() == randomnum5.get() || randomnum4.get() == randomnum5.get()) {
+        // check if theres duplicates and zero
+        if (randomnum1.get() == randomnum2.get() || randomnum1.get() == randomnum3.get() || randomnum1.get() == randomnum4.get() || randomnum1.get() == randomnum5.get() || randomnum2.get() == randomnum3.get() || randomnum2.get() == randomnum4.get() || randomnum2.get() == randomnum5.get() || randomnum3.get() == randomnum4.get() || randomnum3.get() == randomnum5.get() || randomnum4.get() == randomnum5.get() || randomnum1.get() == 0 || randomnum2.get() == 0 || randomnum3.get() == 0 || randomnum4.get() == 0 || randomnum5.get() == 0){
             generateRandomNumbers(randomnum1, randomnum2, randomnum3, randomnum4, randomnum5);
         }
 
@@ -246,8 +246,8 @@ public class Order extends AppCompatActivity {
         num4.setText(String.valueOf(randomnum4));
         num5.setText(String.valueOf(randomnum5));
 
-        // check if theres duplicates
-        if (randomnum1.get() == randomnum2.get() || randomnum1.get() == randomnum3.get() || randomnum1.get() == randomnum4.get() || randomnum1.get() == randomnum5.get() || randomnum2.get() == randomnum3.get() || randomnum2.get() == randomnum4.get() || randomnum2.get() == randomnum5.get() || randomnum3.get() == randomnum4.get() || randomnum3.get() == randomnum5.get() || randomnum4.get() == randomnum5.get()) {
+        // check if theres duplicates and zero
+        if (randomnum1.get() == randomnum2.get() || randomnum1.get() == randomnum3.get() || randomnum1.get() == randomnum4.get() || randomnum1.get() == randomnum5.get() || randomnum2.get() == randomnum3.get() || randomnum2.get() == randomnum4.get() || randomnum2.get() == randomnum5.get() || randomnum3.get() == randomnum4.get() || randomnum3.get() == randomnum5.get() || randomnum4.get() == randomnum5.get() || randomnum1.get() == 0 || randomnum2.get() == 0 || randomnum3.get() == 0 || randomnum4.get() == 0 || randomnum5.get() == 0){
             generateRandomNumbers(randomnum1, randomnum2, randomnum3, randomnum4, randomnum5);
         }
     }
