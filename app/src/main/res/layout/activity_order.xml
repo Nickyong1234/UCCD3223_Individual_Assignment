@@ -4,6 +4,177 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Order">
+    android:background="#B3E5FC"
+    tools:context=".Compose">
+
+    <LinearLayout
+        android:layout_width="348dp"
+        android:layout_height="597dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="34dp" />
+
+        <TextView
+            android:id="@+id/OrderTitle"
+            android:layout_width="254dp"
+            android:layout_height="48dp"
+            android:fontFamily="@font/arbutus_slab"
+            android:text="@string/order_numbers"
+            android:textAlignment="center"
+            android:textSize="30sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="19dp" />
+
+        <TextView
+            android:id="@+id/OrderQuestion"
+            android:layout_width="319dp"
+            android:layout_height="68dp"
+            android:text="@string/please_arrange_the_shown_numbers_in_xxxxxxxxxx_order"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+        <LinearLayout
+            android:id="@+id/selected_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/Selectednum1"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/NumPlaceholder"
+                android:textSize="22sp" />
+
+            <Button
+                android:id="@+id/Selectednum2"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/NumPlaceholder"
+                android:textSize="22sp" />
+
+            <Button
+                android:id="@+id/Selectednum3"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/NumPlaceholder"
+                android:textSize="22sp" />
+
+            <Button
+                android:id="@+id/Selectednum4"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/NumPlaceholder"
+                android:textSize="22sp" />
+
+            <Button
+                android:id="@+id/Selectednum5"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/NumPlaceholder"
+                android:textSize="22sp" />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="146dp">
+
+            <Button
+                android:id="@+id/Num1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="84dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/NumPlaceholder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/Num2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="@string/NumPlaceholder"
+                app:layout_constraintBottom_toBottomOf="@+id/Num1"
+                app:layout_constraintStart_toEndOf="@+id/Num1"
+                app:layout_constraintTop_toTopOf="@+id/Num1"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/Num3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/NumPlaceholder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Num1" />
+
+            <Button
+                android:id="@+id/Num4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="@string/NumPlaceholder"
+                app:layout_constraintBottom_toBottomOf="@+id/Num3"
+                app:layout_constraintStart_toEndOf="@+id/Num3"
+                app:layout_constraintTop_toTopOf="@+id/Num3"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/Num5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="@string/NumPlaceholder"
+                app:layout_constraintBottom_toBottomOf="@+id/Num4"
+                app:layout_constraintStart_toEndOf="@+id/Num4"
+                app:layout_constraintTop_toTopOf="@+id/Num4"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/SubmitButton"
+            android:layout_width="144dp"
+            android:layout_height="wrap_content"
+            android:text="@string/submit"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/BackButton"
+        android:layout_width="329dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/back_to_home"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

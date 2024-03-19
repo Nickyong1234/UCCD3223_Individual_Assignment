@@ -21,4 +21,9 @@
     <string name="OperationSym">X</string>
     <string name="submit">Submit</string>
     <string name="QuestionNumber">Number</string>
+    <string name="order_numbers">Order Numbers</string>
+    <string name="please_arrange_the_shown_numbers_in_xxxxxxxxxx_order">Please arrange the shown numbers in xxxxxxxxxx order</string>
+    <string name="please_select_the_numbers_in_ascending_order">Please arrange the shown numbers in ascending order</string>
+    <string name="please_select_the_numbers_in_descending_order">Please arrange the shown numbers in descending order</string>
+    <string name="NumPlaceholder">XX</string>
 </resources>
